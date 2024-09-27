@@ -1,4 +1,6 @@
-# The present code is an unofficial R version of the model by Metelmann et al 2019 
+# README
+
+# The present code is an unofficial R transcription of the model by Metelmann et al 2019 
 # https://doi.org/10.1098/rsif.2018.0761
 # The author of the code rejects all responsibility about any discrepancies from the model developed in the article
 

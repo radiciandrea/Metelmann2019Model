@@ -1,5 +1,7 @@
+# README
+
 # code to setup W_tot_df with synthetic data
-# the dataframe which cointains, for each simulated day and region, 
+# the dataframe which contains, for each simulated day and region, 
 # population density (/km2), temperatures (°C), rain (mm)
 
 library(dplyr)
@@ -45,6 +47,3 @@ for (year in years){
   
   save(W_tot_df, file = paste0("W_tot_", year, ".RData"))
 }
-
-
-
