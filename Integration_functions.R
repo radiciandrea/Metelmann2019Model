@@ -15,7 +15,7 @@ df <- function(t, x, parms) {
     t_n = t[1]
     t_h = 24*(t - t_n) #should put t and not t[1]
     TM = temp_M[max(1,t_n-1),]*(t_h<t_sr[t_n, ]) + temp_M[t_n,]*(t_h>t_sr[t_n, ])
-    Tm = temp_m[t_n, ]*(t_h<14) + temp_M[min(t_n+1, length(temp_m))]*(t_h>14)
+    Tm = temp_m[t_n, ]*(t_h<14) + temp_m[min(t_n+1, length(temp_m))]*(t_h>14)
     
     temp_h = ((TM+Tm)/2 + (TM-Tm)/2*cos(pi*(t_h+10)/(10+t_sr[t_n, ])))*(t_h<t_sr[t_n, ])+
       ((TM+Tm)/2 - (TM-Tm)/2*cos(pi*(t_h-t_sr[t_n, ])/(14-t_sr[t_n, ])))*(t_h>t_sr[t_n, ])*(t_h<14)+
@@ -61,7 +61,7 @@ df_log <- function(t, x, parms) {
     t_n = t[1]
     t_h = 24*(t - t_n) #should put t and not t[1]
     TM = temp_M[max(1,t_n-1),]*(t_h<t_sr[t_n, ]) + temp_M[t_n,]*(t_h>t_sr[t_n, ])
-    Tm = temp_m[t_n, ]*(t_h<14) + temp_M[min(t_n+1, length(temp_m))]*(t_h>14)
+    Tm = temp_m[t_n, ]*(t_h<14) + temp_m[min(t_n+1, length(temp_m))]*(t_h>14)
     
     temp_h = ((TM+Tm)/2 + (TM-Tm)/2*cos(pi*(t_h+10)/(10+t_sr[t_n, ])))*(t_h<t_sr[t_n, ])+
       ((TM+Tm)/2 - (TM-Tm)/2*cos(pi*(t_h-t_sr[t_n, ])/(14-t_sr[t_n, ])))*(t_h>t_sr[t_n, ])*(t_h<14)+
